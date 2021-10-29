@@ -59,7 +59,7 @@ Example: length_and_value(6,2) should return [2,2,2,2,2,2]
 """
 
 # def length_and_value(a,b):
-#     print (str(b) * a)
+#     return (str(b) * a)
 # print(length_and_value(3,4))
 
 a = 7
