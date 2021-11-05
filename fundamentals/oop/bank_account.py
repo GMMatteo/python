@@ -23,8 +23,8 @@ class BankAccount:
         if BankAccount.can_withdraw(self.balance,amount):
             self.balance -= amount
         else:
-            self.balance -= 5
             print("Insufficient Funds: Charging A $5 fee")
+            self.balance -= 5
         return self
 
     @staticmethod
@@ -50,8 +50,15 @@ class BankAccount:
         else:
             return False
 
-monty_p = BankAccount(.7, 50)
-spam_a = BankAccount(.8, 500)
+    @classmethod
+    def print_all_accounts(cls):
+        for account in cls.accounts:
+            account.display_account_info()
 
-monty_p.deposit(500).deposit(500).deposit(500).withdraw(200).yield_interest().display_account_info()
-spam_a.deposit(1500).deposit(2500).withdraw(1200).withdraw(600).withdraw(200).withdraw(200).yield_interest().display_account_info()
+savings = BankAccount(.7, 50)
+checking = BankAccount(.8, 500)
+
+savings.deposit(500).deposit(500).deposit(500).withdraw(200).yield_interest().display_account_info()
+checking.deposit(1500).deposit(2500).withdraw(1200).withdraw(600).withdraw(200).withdraw(200).yield_interest().display_account_info()
+
+BankAccount.print_all_accounts()
