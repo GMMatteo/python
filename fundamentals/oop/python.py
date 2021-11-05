@@ -3,10 +3,15 @@ class User:
     def __init__(self, name, email_address):
         self.name = name
         self.email = email_address
+        self.account = BankAccount(int_rate=0.02, balance=0)
         self.account_balance = 0
 
     def make_deposit(self, amount):
         self.account_balance += amount
+
+    def example_method(self):
+        self.account.make_deposit(100)
+        print(self.account.balance)
 
 # User ()
 guido = User("Guido van Rossum", "guido@python.com")
@@ -45,6 +50,7 @@ class User2:
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
+        self.savings = BankAccount(.4, 400)
         User.population += 1
 
     def greeting(self):
