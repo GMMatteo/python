@@ -1,4 +1,5 @@
 from . import card
+import random
 
 class Deck:
 
@@ -25,4 +26,22 @@ class Deck:
     def show_cards(self):
         for card in self.cards:
             card.card_info()
+            return self
+
+# Custom Code
+
+    def shuffle(self):
+        for i in range(len(self.cards)-1,0,-1):
+            r = random.randint(0,i)
+            self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
+        return self
+
+    def deal(self):
+        if len(self.cards) == 0:
+            return
+        return self.cards.pop()
+
+    def drawCard(self):
+        return self.cards.pop()
+
 
