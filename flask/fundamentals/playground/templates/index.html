@@ -30,16 +30,9 @@
 <body>
     <h1>Welcome!</h1>
     <div>
-        <p style="--color: cornflowerblue"></p>
-        <p style="--color: cornflowerblue"></p>
-        <p style="--color: cornflowerblue"></p>
-        {#{% for i in range(0,num) %}
-        <p style="--color: cornflowerblue"></p>
-        {% endfor %}
         {% for i in range(0,num) %}
             <p style="--color: {{ color }}"></p>
         {% endfor %}
-        #}
      </div>
 
 </body>

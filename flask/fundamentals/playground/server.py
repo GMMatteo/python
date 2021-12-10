@@ -4,16 +4,15 @@ app = Flask(__name__)
 
 @app.route('/play')
 def hello_world():
-    return render_template("index.html")
+    return render_template("index.html", num=3, color="cornflowerblue")
 
 @app.route('/play/<int:num>')
 def number(num):
-    return render_template("number.html", num=num)
+    return render_template("index.html", num=num, color="cornflowerblue")
 
-@app.route('/play/<int:num>/<string:change_color>')
-def color(num, change_color):
-    color = change_color
-    return render_template("color.html", num=num, color=color)
+@app.route('/play/<int:num>/<string:color>')
+def color(num, color):
+    return render_template("index.html", num=num, color=color)
 
 @app.errorhandler(404)
 def page_not_found(e):
