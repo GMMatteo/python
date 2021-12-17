@@ -13,7 +13,12 @@
         <div class="container">
           <h1 class="jumbotron-heading">COUNTER</h1>
         </div>
-        <div class="p-3">{{ count }} VISIT(S)</div>
+        <!-- <div class="p-3">{{ visit }} ACTUAL VISIT(S)</div> -->
+        <div class="p-3">{{ count }} CUSTOM VISIT(S)</div>
+            <form action='/increment' method="POST">
+                <input type="text" id="value" name="value" placeholder="Increment By #">
+                <button type="submit" class="btn btn-warning m-2" value="additional visits">Add</button>
+            </form>
         <div class="p-3 d-flex justify-content-center">
             <form action='/add'><button type="submit" class="btn btn-success m-2" value="+2">Add 2 Visits</button></form>
             <form action='/reset'><button type="submit" class="btn btn-danger m-2" value ="reset">Reset</button></form>
