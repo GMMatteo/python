@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css')}}"
+</head>
+<body>
+
+    <form action='/process' method='post'>
+		<input name="name" placeholder="Your Name" class="name" id="name" />
+        <select name="location" class="location" id="location">
+            <option selected>Dojo Location</option>
+            <option name="online">ONLINE</option>
+            <option name="bellevue">Bellevue, WA</option>
+            <option name="boise">Boise, ID</option>
+            <option name="chicago">Chicago, IL</option>
+            <option name="la">Los Angeles, CA</option>
+            <option name="silicon">Silicon Valley, CA</option>
+          </select>
+        <select name="language" class="language" id="language">
+            <option selected>Favorite Language</option>
+            <option name="python">Python</option>
+            <option name="java">Java</option>
+            <option name="mern">Mern</option>
+            <option name="c#">C#</option>
+          </select>
+          <p>Choose Your Course:</p>
+          <div>
+            <label for="full_time">Full Time<input class="chbx" type="checkbox" id="full_time" name="course" value="Full Time"></label>
+            <label for="part_time">Part Time<input class="chbx" type="checkbox" id="part_time" name="course" value="Part Time"></label>
+            <label for="Part Time Flex">Part Time Flex<input class="chbx" type="checkbox" id="part_time_flex" name="course" value="full_time_flex"></label>
+          </div>
+          <p>Do You Have Any Prior Knowledge: </p>
+          <div>
+            <label for="html">HTML<input class="chbx" type="radio" id="html" name="exp" value="HTML"></label>
+            <label for="css">CSS<input class="chbx" type="radio" id="css" name="exp" value="CSS"></label>
+            <label for="javascript">JavaScript<input class="chbx" type="radio" id="javascript" name="exp" value="JavaScript">
+            </label>
+          </div>
+        <textarea rows="4" cols="50" name="comments" placeholder="Comments (optional)" class="message" id="comments"></textarea>
+        <input name="submit" class="btn" type="submit" value="Submit" />
+    </form>
+
+</body>
+</html>

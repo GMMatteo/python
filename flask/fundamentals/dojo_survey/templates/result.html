@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css')}}">
+    <title>Submitted Info</title>
+</head>
+<body>
+    <div id="response">
+    <p class="title">Submitted Info</p>
+    <div id="results">
+        <div class="row">
+            <div class="column">
+                <span>Name:</span>
+            </div>
+            <div class="column">
+                <span>{{session['name']}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <span>Dojo Location:</span>
+            </div>
+            <div class="column">
+                <span>{{session['location']}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <span>Favorite Language:</span>
+            </div>
+            <div class="column">
+                <span>{{session['language']}}</span>
+            </div>
+        </div>
+                <div class="row">
+            <div class="column">
+                <span>Course:</span>
+            </div>
+            <div class="column">
+                <span>{{session['course']}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <span>Experience:</span>
+            </div>
+            <div class="column">
+                <span>{{session['experience']}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <span>Comments:</span>
+            </div>
+            <div class="column">
+                <span>{{session['comments']}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="link"><a href="/">Go Back</a></div>
+    </div>
+</body>
+</html>
