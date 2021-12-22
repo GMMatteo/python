@@ -135,7 +135,14 @@ p, label {
     width: 20px;
     height: 20px;
     padding: 0;
-    margin-left:140px;
+    display: inline-block;
+}
+
+.checkbox-div{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
 }
 
 select {
