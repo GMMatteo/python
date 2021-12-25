@@ -44,11 +44,6 @@ def update():
     User.edit(request.form)
     return redirect('/')
 
-# @app.route('/user/update',methods=['POST'])
-# def update():
-#     User.update(request.form)
-#     return redirect('/')
-
 @app.route('/user/destroy/<int:id>')
 def delete(id):
     data ={
