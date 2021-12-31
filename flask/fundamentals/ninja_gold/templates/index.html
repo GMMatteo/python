@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{{ url_for('static', filename='css/style.css') }}'>
+    <!-- <link rel="stylesheet" href="C:\Users\Giacomo\CodingDojo\python\flask\fundamentals\ninja_gold\static\css\style.css"> -->
+    <title>Ninjas Money</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="score">
+                <h2>
+                    Your Gold:
+                </h2>
+                <p class="gold">{{session.gold}}</p>
+            </div>
+            {% if session.gold > 500 %}
+            <h2 class="gain">YOU WON!</h2>
+            {% endif %}
+        </div>
+        <div id="forms">
+            <div class="form">
+                <h3>Farm</h3>
+                <p>(earns 10-20 golds)</p>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="find" value="farm" />
+                    <input type="submit" value="Find Gold!"/>
+                </form>
+            </div>
+            <div class="form">
+                <h3>Cave</h3>
+                <p>(earns 5-10 golds)</p>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="find" value="cave" />
+                    <input type="submit" value="Find Gold!"/>
+                </form>
+            </div>
+            <div class="form">
+                <h3>House</h3>
+                <p>(earns 2-5 golds)</p>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="find" value="house" />
+                    <input type="submit" value="Find Gold!"/>
+                </form>
+            </div>
+            <div class="form">
+                <h3>Casino</h3>
+                <p>(earns/takes 0-50 golds)</p>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="find" value="casino" />
+                    <input type="submit" value="Find Gold!"/>
+                </form>
+            </div>
+        </div>
+        <div id="activities">
+            <h2>Activities:</h2>
+            <div class="activity gain">
+                <ul>
+                {% for action in session.activities %}
+                    <li>{{action|safe}}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% if session.count > 14 %}
+        <div class="button">
+            <h2 class="loss">YOU LOSE!</h2>
+            <button><a href="/reset"><h4>PLAY AGAIN</h4></a></button>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

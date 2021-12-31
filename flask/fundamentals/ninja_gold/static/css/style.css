@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 980px;
+}
+
+#header {
+    display: flex;
+    margin: 10px 400px 10px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score {
+    display: flex;
+}
+
+#forms {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+}
+
+.gold {
+    border: black solid 2px;
+    height: 25px;
+    width: 180px;
+    margin-left: 10px;
+}
+
+.form {
+    border: black solid 2px;
+    padding: 10px;
+    text-align: center;
+    width: 180px;
+}
+
+.form h3,p, form {
+    padding: 5px;
+}
+
+#activities {
+    padding: 10px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
+}
+
+.activity {
+    margin-top: 10px;
+    border: black solid 2px;
+    width: 980px;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.gain {
+    color: green;
+}
+
+.loss {
+    color: red;
+}
+
+button {
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.button {
+    text-align: center;
+}
