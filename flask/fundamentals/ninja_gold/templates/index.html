@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href='{{ url_for('static', filename='css/style.css') }}'>
-    <!-- <link rel="stylesheet" href="C:\Users\Giacomo\CodingDojo\python\flask\fundamentals\ninja_gold\static\css\style.css"> -->
     <title>Ninjas Money</title>
 </head>
 <body>
@@ -21,6 +20,7 @@
             <h2 class="gain">YOU WON!</h2>
             {% endif %}
         </div>
+        {% if session.count < 15 %}
         <div id="forms">
             <div class="form">
                 <h3>Farm</h3>
@@ -55,6 +55,7 @@
                 </form>
             </div>
         </div>
+        {% endif %}
         <div id="activities">
             <h2>Activities:</h2>
             <div class="activity gain">
@@ -70,6 +71,11 @@
             <h2 class="loss">YOU LOSE!</h2>
             <button><a href="/reset"><h4>PLAY AGAIN</h4></a></button>
         </div>
+        {% endif %}
+        {% if session.count < 15 %}
+        <h3 class="button">
+            To win you must obtain 500 gold in less than 15 moves.
+        </h3>
         {% endif %}
     </div>
 </body>
