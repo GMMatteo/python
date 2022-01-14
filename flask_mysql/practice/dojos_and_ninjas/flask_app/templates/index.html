@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="C:\Users\Giacomo\CodingDojo\python\flask_mysql\practice\dojos_and_ninjas\flask_app\static\css\style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Dojos</title>
+</head>
+<body>
+    <div id="nav">
+        <div id="wrapper">
+            <div class="header">
+                <div class="info">
+                    <h1>New Dojo</h1>
+                    <form action="/newDojo" method="POST">
+                        <label for=""></label>
+                        <input type="text" placeholder="Create New Dojo" name="name">
+                        <input type="submit" value="Create">
+                    </form>
+                </div>
+                <div class="info">
+                    <div>
+                        <h1>All Dojos</h1>
+                        {% for dojo in dojos %}
+                        <p>
+                            <a href="/dojo/{{dojo.id}}">{{dojo.name}}</a>
+                        </p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="nav-btm">
+                <a href="/ninjas" class="link">Add Ninja</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

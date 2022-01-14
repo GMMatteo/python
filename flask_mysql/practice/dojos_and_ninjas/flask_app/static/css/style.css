@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 980px;
+}
+
+#nav {
+    margin-top: 50px;
+    max-width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* background-color: aqua; */
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightslategrey;
+    padding: 20px;
+    width: 300px;
+    max-height: 100%;
+    color: orange;
+    border: black 2px solid;
+}
+
+.info, a:link, a:visited, a:active {
+    text-decoration: none;
+    color: orange;
+}
+
+.info a:hover {
+    font-weight: bolder;
+}
+
+.info, p {
+    font-size: 16px;
+    text-align: center;
+}
+
+a.link {
+    text-align: center;
+    display: inline-block;
+    background:lightslategray;
+    border: black 2px solid;
+    color:midnightblue;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /* padding-left: 250px; */
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    color: midnightblue;
+}
+
+input[type=submit] {
+    background:midnightblue;
+    color:lightslategrey;
+    height:40px;
+    width:100px;
+    text-shadow:none;
+    margin-top: 20px;
+}
+
+input[type=text] {
+    width: 300px;
+    height: 30px;
+}
+
+.tbl {
+    text-align: center;
+}
+
+#ninjas {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#ninjas td, #ninjas th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#ninjas tr:nth-child(even){background-color: #f2f2f2;}
+
+#ninjas tr:hover {background-color: #ddd;}
+
+#ninjas th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: lightslategrey;
+    color: midnightblue;
+}
+
+.button {
+    background:lightslategray;
+    border: none;
+    color:midnightblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button, a {
+    text-decoration: none;
+}
+
+.button a:hover {
+    font-weight: bolder;
+}
+
+.nav-btm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

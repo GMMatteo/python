@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="C:\Users\Giacomo\CodingDojo\python\flask_mysql\practice\dojos_and_ninjas\flask_app\static\css\style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Ninjas</title>
+</head>
+<body>
+    <div id="nav">
+        <div id="wrapper">
+            <div class="header">
+                <div class="info">
+                    <h1>New Ninja</h1>
+                    <form action="/newNinja" method="POST">
+                        <label for="dojo">Dojo:</label>
+                        <select id="dojo" name="dojo_id">
+                            {% for dojo in dojos %}
+                            <option value="{{dojo.id}}">{{dojo.name}}</option>
+                            {% endfor %}
+                        </select>
+                        <label for="" placeholder="First Name"></label>
+                        <input type="text" placeholder="First Name" name="first_name">
+                        <label for="" placeholder="Last Name"></label>
+                        <input type="text" placeholder="Last Name" name="last_name">
+                        <label for="" placeholder="Age"></label>
+                        <input type="text" placeholder="Age" name="age">
+                        <input type="submit" value="Create">
+                    </form>
+                </div>
+            </div>
+            <div class="nav-btm">
+                <button class="button"><a href="/">Home</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
